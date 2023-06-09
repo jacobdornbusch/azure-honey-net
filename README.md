@@ -5,30 +5,30 @@
 
 In this project, I built a honeynet within Microsoft Azure, employing the following steps:
 
-- Created a honeynet infrastructure in Microsoft Azure.
-- Collected log data from various sources and directed them into a Log Analytics Workspace.
-- Utilized Microsoft Sentinel to analyze the log data, generate attack maps, trigger alerts, and create incidents.
-- Assessed security metrics in the insecure environment for a 24-hour period.
-- Implemented basic security controls to fortify the environment.
-- Reassessed the security metrics after another 24 hours following the implementation of the security controls.
+- Created a honeynet infrastructure in Microsoft Azure
+- Collected log data from various sources and directed them into a Log Analytics Workspace
+- Utilized Microsoft Sentinel to analyze the log data, generate attack maps, trigger alerts, and create incidents
+- Assessed security metrics in the insecure environment for a 24-hour period
+- Implemented basic security controls to fortify the environment
+- Reassessed the security metrics after another 24 hours following the implementation of the security controls
 
 The metrics were obtained from the following sources:
 - SecurityEvent (Windows Event Logs) 
-- Derived from the Windows Virtual Machine and the installed MSSQL Server.
+- Derived from the Windows Virtual Machine and the installed MSSQL Server
 - Syslog (Linux Event Logs) 
-- Derived from the Linux Virtual Machine.
-- SecurityAlert (Log Analytics Alerts Triggered).
-- SecurityIncident (Incidents created by Sentinel).
-- AzureNetworkAnalytics_CL (Malicious Flows allowed into the honeynet due to configured NSG rules).
+- Derived from the Linux Virtual Machine
+- SecurityAlert (Log Analytics Alerts Triggered)
+- SecurityIncident (Incidents created by Sentinel)
+- AzureNetworkAnalytics_CL (Malicious Flows allowed into the honeynet due to configured NSG rules)
 
 The honeynet architecture in Azure consisted of the following components:
-- Virtual Network (VNet).
-- Network Security Groups (NSG).
-- Virtual Machines (2 Windows and 1 Linux).
-- Log Analytics Workspace (LAW).
-- Azure Key Vault.
-- Azure Storage Account.
-- Microsoft Sentinel.
+- Virtual Network (VNet)
+- Network Security Groups (NSG)
+- Virtual Machines (2 Windows and 1 Linux)
+- Log Analytics Workspace (LAW)
+- Azure Key Vault
+- Azure Storage Account
+- Microsoft Sentinel
 
 ## Architecture Before Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
